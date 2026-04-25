@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ghost SIP — Маркетплейс SIP-аккаунтов</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a14; color: #e0e0e8; max-width: 420px; margin: 0 auto; padding: 20px; }
+h2 { text-align: center; font-size: 22px; margin-bottom: 5px; }
+.subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 25px; }
+.section-title { font-size: 16px; font-weight: 700; margin: 25px 0 12px; padding-left: 4px; }
+.msg-bubble { background: #1a1a2e; border-radius: 14px; padding: 16px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.06); }
+.msg-header { font-size: 13px; color: #7c5cfc; font-weight: 600; margin-bottom: 8px; }
+.msg-text { font-size: 14px; line-height: 1.6; color: #d0d0d8; }
+.btn { display: block; background: #2a2a3e; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 13px 16px; margin: 6px 0; font-size: 14px; color: #e0e0e8; text-align: center; text-decoration: none; transition: background 0.2s; }
+.btn:hover { background: #3a3a50; }
+.btn-row { display: flex; gap: 6px; }
+.btn-row .btn { flex: 1; }
+.btn-accent { background: linear-gradient(135deg, #00d4aa, #00b894); color: #fff; border: none; font-weight: 600; }
+.btn-accent:hover { background: linear-gradient(135deg, #00b894, #009d7a); }
+.divider { height: 1px; background: rgba(255,255,255,0.06); margin: 25px 0; }
+.price-card { background: #1a1a2e; border-radius: 14px; padding: 16px; margin: 8px 0; border-left: 3px solid; }
+.price-cold { border-color: #4ecbff; }
+.price-hot { border-color: #ff6b35; }
+.price-label { font-size: 13px; color: #888; }
+.price-value { font-size: 20px; font-weight: 700; margin: 4px 0; }
+.price-cold .price-value { color: #4ecbff; }
+.price-hot .price-value { color: #ff6b35; }
+.price-desc { font-size: 12px; color: #666; }
+.discount-bar { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0; }
+.discount-item { background: #1a1a2e; border-radius: 8px; padding: 6px 10px; text-align: center; flex: 1; min-width: 70px; }
+.discount-time { font-size: 11px; color: #666; }
+.discount-pct { font-size: 15px; font-weight: 700; color: #00d4aa; }
+.shield { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 10px; padding: 12px 16px; margin: 6px 0; font-size: 13px; color: #a0a0b0; }
+.shield b { color: #00d4aa; }
+.footer { text-align: center; margin-top: 30px; padding: 20px; }
+.footer a { color: #7c5cfc; text-decoration: none; font-weight: 600; font-size: 16px; }
+.bot-icon { text-align: center; font-size: 48px; margin-bottom: 10px; }
+.step { display: flex; gap: 12px; margin: 10px 0; align-items: flex-start; }
+.step-num { background: #2a2a3e; border: 2px solid #00d4aa; border-radius: 50%; min-width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #00d4aa; }
+.step-text { font-size: 13px; color: #a0a0b0; line-height: 1.5; }
+.step-text b { color: #e0e0e8; }
+</style>
+</head>
+<body>
+
+<div class="bot-icon">🤖</div>
+<h2>Ghost SIP</h2>
+<div class="subtitle">Маркетплейс SIP-аккаунтов в Telegram</div>
+
+<!-- Chat bubble -->
+<div class="msg-bubble">
+<div class="msg-header">Ghost BOT</div>
+<div class="msg-text">
+Забудьте про ручной поиск SIP по чатам и переписки с незнакомцами.<br><br>
+Один бот. Два клика. Рабочий SIP у вас.
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Prices -->
+<div class="section-title">📦 Два типа SIP</div>
+
+<div class="price-card price-cold">
+<div class="price-label">❄️ Холод (1 этап)</div>
+<div class="price-value">$90 — $140</div>
+<div class="price-desc">Холодные звонки • Продление $15/$20</div>
+</div>
+
+<div class="price-card price-hot">
+<div class="price-label">🔥 2-3 этап</div>
+<div class="price-value">$70 — $90</div>
+<div class="price-desc">Тёплые/горячие звонки • Продление $10/$15</div>
+</div>
+
+<div class="section-title">📉 Скидки в течение дня</div>
+<div class="discount-bar">
+<div class="discount-item"><div class="discount-time">10:00</div><div class="discount-pct">-10%</div></div>
+<div class="discount-item"><div class="discount-time">12:00</div><div class="discount-pct">-20%</div></div>
+<div class="discount-item"><div class="discount-time">14:00</div><div class="discount-pct">-40%</div></div>
+<div class="discount-item"><div class="discount-time">17:00</div><div class="discount-pct">-70%</div></div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Buyer menu -->
+<div class="section-title">🛒 Меню покупателя</div>
+
+<div class="msg-bubble">
+<div class="msg-header">Ghost BOT</div>
+<div class="msg-text">🏠 Главное меню покупателя<br><br>Выберите действие:</div>
+</div>
+
+<a class="btn" href="#">💰 Баланс</a>
+<a class="btn" href="#">🛒 Купить SIP</a>
+<a class="btn" href="#">🔖 Забронировать SIP</a>
+<a class="btn" href="#">🕐 Продлить SIP</a>
+<a class="btn" href="#">↩️ Отказаться от SIP</a>
+<a class="btn" href="#">📣 Запрос SIP</a>
+<a class="btn" href="#">📊 Статистика</a>
+<a class="btn" href="#">📋 Данные SIP</a>
+<a class="btn" href="#">📜 История покупок</a>
+
+<div class="divider"></div>
+
+<!-- Seller menu -->
+<div class="section-title">💼 Меню продавца</div>
+
+<div class="msg-bubble">
+<div class="msg-header">Ghost BOT</div>
+<div class="msg-text">🏠 Главное меню продавца<br><br>Выберите действие:</div>
+</div>
+
+<a class="btn" href="#">📦 Выставить SIP на продажу</a>
+<a class="btn" href="#">❌ Снять SIP с продажи</a>
+<a class="btn" href="#">📊 Мои SIP аккаунты</a>
+<a class="btn" href="#">🔌 Отключить SIP</a>
+<a class="btn" href="#">💰 Просмотреть баланс</a>
+<a class="btn" href="#">📈 Статистика</a>
+<a class="btn" href="#">📜 История продаж</a>
+<a class="btn" href="#">📋 Документы</a>
+
+<div class="divider"></div>
+
+<!-- Purchase flow -->
+<div class="section-title">⚡️ Покупка за 4 шага</div>
+
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-text"><b>Пополните баланс</b><br>USDT TRC-20 → вставьте хэш → баланс мгновенно</div>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-text"><b>Выберите SIP</b><br>Этап → SIP из списка → подтвердите</div>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-text"><b>Получите данные</b><br>Логин, пароль, домен — подключите в MicroSIP</div>
+</div>
+<div class="step">
+<div class="step-num">4</div>
+<div class="step-text"><b>Проверьте за 20 мин</b><br>Работает ✅ → деньги списаны<br>Не работает ❌ → полный возврат</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Protection -->
+<div class="section-title">🛡 Защита</div>
+
+<div class="shield">✅ <b>Деньги на удержании</b> до подтверждения работы SIP</div>
+<div class="shield">✅ <b>Полный возврат</b> если SIP не работает — без споров</div>
+<div class="shield">✅ <b>Тикет-система</b> с автоэскалацией через 15 минут</div>
+<div class="shield">✅ <b>Прозрачные скидки</b> — чем позже, тем дешевле</div>
+
+<div class="divider"></div>
+
+<!-- Schedule -->
+<div class="msg-bubble">
+<div class="msg-text">
+🕐 Рабочий день SIP: <b>08:00–18:00</b><br>
+🛒 Покупка: <b>07:00–20:00</b><br>
+🔖 Бронирование: <b>20:00–07:00</b><br>
+💳 Оплата: <b>USDT TRC-20</b>
+</div>
+</div>
+
+<div class="footer">
+<a href="https://t.me/ghostsip_bot">👉 Начать → @ghostsip_bot</a>
+</div>
+
+</body>
+</html>
